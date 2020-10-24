@@ -1,0 +1,46 @@
+year,threatened_category,count
+2020,Critically Endangered,6811
+2019,Critically Endangered,6413
+2018,Critically Endangered,5826
+2017,Critically Endangered,5583
+2016,Critically Endangered,5210
+2015,Critically Endangered,4894
+2014,Critically Endangered,4631
+2013,Critically Endangered,4282
+2012,Critically Endangered,4084
+2011,Critically Endangered,3875
+2010,Critically Endangered,3561
+2009,Critically Endangered,3321
+2008,Critically Endangered,3242
+2007,Critically Endangered,3120
+2006,Critically Endangered,3071
+2020,Endangered,11732
+2019,Endangered,10629
+2018,Endangered,9032
+2017,Endangered,8455
+2016,Endangered,7781
+2015,Endangered,7322
+2014,Endangered,6938
+2013,Endangered,6453
+2012,Endangered,5918
+2011,Endangered,5688
+2010,Endangered,5255
+2009,Endangered,4890
+2008,Endangered,4769
+2007,Endangered,4563
+2006,Endangered,4481
+2020,Vulnerable,13898
+2019,Vulnerable,13136
+2018,Vulnerable,11982
+2017,Vulnerable,11783
+2016,Vulnerable,11316
+2015,Vulnerable,11028
+2014,Vulnerable,10836
+2013,Vulnerable,10545
+2012,Vulnerable,10211
+2011,Vulnerable,10001
+2010,Vulnerable,9529
+2009,Vulnerable,9074
+2008,Vulnerable,8911
+2007,Vulnerable,8617
+2006,Vulnerable,8564
