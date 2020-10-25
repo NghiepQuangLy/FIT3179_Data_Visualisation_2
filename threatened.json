@@ -9,10 +9,10 @@
     "lookup": "properties['POSTAL']",
     "from": {
       "data": {
-        "url": "https://raw.githubusercontent.com/NghiepQuangLy/FIT3179_Data_Visualisation_2/main/Threatened_species_in_each_major_group_by_country_2020.csv"
+        "url": "https://raw.githubusercontent.com/NghiepQuangLy/FIT3179_Data_Visualisation_2/main/Threatened_species_in_each_major_group_by_country_2020_new.csv"
       },
       "key": "Postal",
-      "fields": ["Normalized_Threatened_Total", "Threatened_Total", "Threatened_Mammals", "Threatened_Birds", "Threatened_Reptiles", "Threatened_Amphibians", "Threatened_Fishes", "Threatened_Plants"]
+      "fields": ["Country", "Normalized_Threatened_Total", "Threatened_Total", "Threatened_Mammals", "Threatened_Birds", "Threatened_Reptiles", "Threatened_Amphibians", "Threatened_Fishes", "Threatened_Plants", "Pivot Field Values", "Major Group"]
     }}],
   "hconcat": [
     {
@@ -23,11 +23,11 @@
       },
       "projection": {"type": "equalEarth"},
       "view": {"strokeWidth": 0},
-      "width": 720,
-      "height": 450,
+      "width": 800,
+      "height": 500,
       "selection": {
         "highlight": {"type": "multi", "empty": "none", "on": "mouseover"},
-        "country_select": {"type": "single", "resolve": "global", "empty": "none"}
+        "country_select": {"type": "multi", "init": [{"Country": "Australia"}], "fields": ["Country"], "resolve": "global", "empty": "none"}
       },
       "mark": {"type": "geoshape", "stroke": "white"},
       "encoding": {
@@ -68,6 +68,9 @@
       }
     },
     {
+      "data": {
+        "url": "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/Threatened_species_in_each_major_group_by_country_2020_new.csv"
+      },
       "height": 210,
       "width": 300,
       "title": {
@@ -76,27 +79,43 @@
         "fontSize": 17
       },
       "transform": [
-        {"fold": ["Threatened_Mammals", "Threatened_Birds", "Threatened_Reptiles", "Threatened_Amphibians", "Threatened_Fishes", "Threatened_Plants"]},
         {"filter": {"selection": "country_select"}}
       ],
-      "mark": "bar",
       "encoding": {
         "x": {
-          "field": "value",
+          "field": "Pivot Field Values",
           "type": "quantitative",
           "title": "Species"
         },
         "y": {
-          "field": "key",
+          "field": "Major Group",
           "type": "nominal",
-          "title": "Threatened Groups"
+          "title": "Major Group"
         },
         "color": {"value":"red"},
         "tooltip": [
-          {"field": "properties['FORMAL_EN']", "type": "nominal", "title": "Country"},
+          {"field": "Country", "type": "nominal", "title": "Country"},
           {"field": "Normalized_Threatened_Total", "type": "quantitative", "title": "Normalized threatened score"}
         ]
-      }
+      },
+      "layer": [
+        {
+          "mark": "bar"
+        },
+        {
+          "mark": {
+            "type": "text",
+            "font": "lato",
+            "fontWeight": "bold",
+            "align": "left",
+            "baseline": "middle",
+            "dx": 3
+          },
+          "encoding": {
+            "text": {"field": "Pivot Field Values", "type": "quantitative"}
+          }
+        }
+      ]
     }
   ]  
 }
