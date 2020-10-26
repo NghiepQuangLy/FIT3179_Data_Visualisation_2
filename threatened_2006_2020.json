@@ -1,0 +1,37 @@
+{
+  "title": {
+            "text": "THREATENED SPECIES WORLDWIDE BY YEAR",
+            "font": "open sans",
+            "fontSize": 17
+  },
+  "view": {"strokeWidth": 0},
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 300, "height": 200,
+  "data": {"url": "https://raw.githubusercontent.com/NghiepQuangLy/FIT3179_Data_Visualisation_2/main/Threatened_species_count_2006_2020.csv"},
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "year",
+      "field": "year",
+      "axis": {"format": "%Y", "gridDash": [5, 5]},
+      "title": "Year"
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "count",
+      "title": "Number of Species",
+      "axis": {"gridDash": [5, 5]}
+    },
+    "color": {
+      "field": "threatened_category",
+      "scale": {"scheme": "reds"},
+      "title": "Threatened Category",
+      "sort": "descending"
+    },
+    "tooltip": [
+      {"field": "year", "type": "temporal", "title": "Year", "format": "%Y"},
+      {"field": "threatened_category", "type": "nominal", "title": "Threatened category"},
+      {"field": "count", "type": "quantitative", "title": "Number of species"}
+    ]
+  }
+}
