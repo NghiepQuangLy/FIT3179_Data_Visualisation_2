@@ -11,6 +11,7 @@
 
 <div id="vis"></div>
 <div id="vis2"></div>
+<div id="vis3"></div>
 <script type="text/javascript">
   var spec = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/biodiversity.json";
   vegaEmbed('#vis', spec).then(function(result) {
@@ -19,6 +20,11 @@
   
   var spec2 = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/threatened.json";
   vegaEmbed('#vis2', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  var spec3 = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/threatened_2006_2020.json";
+  vegaEmbed('#vis3', spec3).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
