@@ -47,7 +47,7 @@
             }
             },
             "tooltip": [
-              {"field": "properties['FORMAL_EN']", "type": "nominal", "title": "Country"},
+              {"field": "properties['NAME']", "type": "nominal", "title": "Country"},
               {"field": "Total", "type": "quantitative", "title": "Native species"},
               {"field": "Normalized_Total", "type": "quantitative", "format": ".2f", "title": "Normalized biodiversity score"}
               ],
