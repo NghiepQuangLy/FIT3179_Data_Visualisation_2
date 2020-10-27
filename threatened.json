@@ -47,7 +47,11 @@
               "legend": {
                 "title": "Normalized threatened score",
                 "titleFont": "open sans",
-                "labelFont": "lato"
+                "labelFont": "open sans",
+                "orient": "none",
+                "direction": "horizontal",
+                "legendX": 200,
+                "legendY": 320
               }
             },
             "tooltip": [
@@ -111,7 +115,8 @@
         "x": {
           "field": "Pivot Field Values",
           "type": "quantitative",
-          "title": "Species"
+          "title": "Species",
+          "scale": {"domain": [0, 2500]}
         },
         "y": {
           "field": "Major Group",
@@ -132,7 +137,7 @@
         {
           "mark": {
             "type": "text",
-            "font": "lato",
+            "font": "open sans",
             "fontWeight": "bold",
             "align": "left",
             "baseline": "middle",
