@@ -46,7 +46,7 @@
                 "scheme": "reds"
               },
               "legend": {
-                "title": "Normalized threatened score",
+                "title": "Normalized Threatened Score",
                 "titleFont": "open sans",
                 "labelFont": "open sans",
                 "titleColor": "gray",
