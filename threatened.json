@@ -22,7 +22,8 @@
           "title": {
             "text": "THREATENED SPECIES BY COUNTRY IN 2020",
             "font": "open sans",
-            "fontSize": 17
+            "fontSize": 17,
+            "color": "red"
           },
           "projection": {"type": "equalEarth"},
           "width": 600,
@@ -48,6 +49,8 @@
                 "title": "Normalized threatened score",
                 "titleFont": "open sans",
                 "labelFont": "open sans",
+                "titleColor": "gray",
+                "labelColor": "gray",
                 "orient": "none",
                 "direction": "horizontal",
                 "legendX": 200,
@@ -98,15 +101,17 @@
       ]
     },
     {
+      "view": {"strokeWidth": 0},
       "data": {
         "url": "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/Threatened_species_in_each_major_group_by_country_2020_new.csv"
       },
-      "height": 280,
+      "height": 325,
       "width": 300,
       "title": {
         "text": "THREATENED SPECIES BY GROUP BY COUNTRY",
         "font": "open sans",
-        "fontSize": 17
+        "fontSize": 17,
+        "color": "red"
       },
       "transform": [
         {"filter": {"selection": "country_select"}}
@@ -115,13 +120,30 @@
         "x": {
           "field": "Pivot Field Values",
           "type": "quantitative",
-          "title": "Species",
-          "scale": {"domain": [0, 2500]}
+          "title": "SPECIES",
+          "scale": {"domain": [0, 2500]},
+          "axis": {
+            "gridDash": [10, 10],
+            "domainColor": "white",
+            "tickColor": "lightgray",
+            "labelColor": "gray",
+            "titleColor": "gray",
+            "titleFontWeight": "bold",
+            "titleFont": "open sans"
+          }
         },
         "y": {
           "field": "Major Group",
           "type": "nominal",
-          "title": "Major Group"
+          "title": "MAJOR GROUP",
+          "axis": {
+            "domainColor": "white",
+            "tickColor": "white",
+            "labelColor": "gray",
+            "titleColor": "gray",
+            "titleFontWeight": "bold",
+            "titleFont": "open sans"
+          }
         },
         "color": {"value":"red"},
         "tooltip": [
