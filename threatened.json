@@ -125,7 +125,7 @@
           "axis": {
             "gridDash": [10, 10],
             "domainColor": "white",
-            "tickColor": "lightgray",
+            "tickColor": "white",
             "labelColor": "gray",
             "titleColor": "gray",
             "titleFontWeight": "bold",
