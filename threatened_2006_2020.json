@@ -2,7 +2,8 @@
   "title": {
             "text": "THREATENED SPECIES WORLDWIDE BY YEAR",
             "font": "open sans",
-            "fontSize": 17
+            "fontSize": 17,
+            "color": "red"
   },
   "view": {"strokeWidth": 0},
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
@@ -13,25 +14,49 @@
     "x": {
       "timeUnit": "year",
       "field": "year",
-      "axis": {"format": "%Y", "gridDash": [5, 5]},
-      "title": "Year"
+      "axis": {
+        "format": "%Y",
+        "gridDash": [10, 10],
+        "domainColor": "white",
+        "tickColor": "lightgray",
+        "labelColor": "gray",
+        "titleColor": "gray",
+        "titleFontWeight": "bold",
+        "titleFont": "open sans"
+      },
+      "title": ""
     },
     "y": {
       "aggregate": "sum",
       "field": "count",
-      "title": "Number of Species",
-      "axis": {"gridDash": [5, 5]}
+      "title": "NUMBER OF SPECIES",
+      "axis": {
+        "gridDash": [10, 10],
+        "domainColor": "white",
+        "tickColor": "white",
+        "labelColor": "gray",
+        "titleColor": "gray",
+        "titleFontWeight": "bold",
+        "titleFont": "open sans"
+      }
     },
     "color": {
       "field": "threatened_category",
       "scale": {"scheme": "reds"},
       "title": "Threatened Category",
-      "sort": "descending"
+      "sort": "descending",
+      "legend": {
+        "title": "Threatened Category",
+        "titleFont": "open sans",
+        "labelFont": "open sans",
+        "titleColor": "gray",
+        "labelColor": "gray"
+      }
     },
     "tooltip": [
       {"field": "year", "type": "temporal", "title": "Year", "format": "%Y"},
       {"field": "threatened_category", "type": "nominal", "title": "Threatened category"},
-      {"field": "count", "type": "quantitative", "title": "Number of species"}
+      {"field": "count", "type": "quantitative", "title": "Number of species", "format": ","}
     ]
   }
 }
