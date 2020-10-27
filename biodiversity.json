@@ -1,12 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "background": "white",
-  "width": 800,
-  "height": 500,
+  "width": 600,
+  "height": 300,
   "title": {
     "text": "BIODIVERSITY BY COUNTRY IN 2020",
     "font": "open sans",
-    "fontSize": 17
+    "fontSize": 17,
+    "color": "green"
   },
   "projection": {"type": "equalEarth"},
   "config":{"view": {"strokeWidth": 0}},
@@ -43,12 +44,14 @@
           "legend": {
             "title": "Normalized biodiversity score",
             "titleFont": "open sans",
-            "labelFont": "lato"
+            "labelFont": "open sans",
+            "titleColor": "gray",
+            "labelColor": "gray"
             }
             },
             "tooltip": [
               {"field": "properties['NAME']", "type": "nominal", "title": "Country"},
-              {"field": "Total", "type": "quantitative", "title": "Native species"},
+              {"field": "Total", "type": "quantitative", "title": "Native species", "format": ","},
               {"field": "Normalized_Total", "type": "quantitative", "format": ".2f", "title": "Normalized biodiversity score"}
               ],
             "stroke": {
