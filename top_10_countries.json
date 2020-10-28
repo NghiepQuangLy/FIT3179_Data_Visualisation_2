@@ -1,0 +1,67 @@
+{
+      "view": {"strokeWidth": 0},
+      "data": {
+        "url": "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/Top_10_countries_with_threatened_species.csv"
+      },
+      "height": 325,
+      "width": 300,
+      "title": {
+        "text": "TOP 10 COUNTRIES WITH THE MOST THREATENED SPECIES",
+        "font": "open sans",
+        "fontSize": 17,
+        "color": "red"
+      },
+      "encoding": {
+        "x": {
+          "field": "Threatened_Total",
+          "type": "quantitative",
+          "title": "SPECIES",
+          "axis": {
+            "gridDash": [10, 10],
+            "domainColor": "white",
+            "tickColor": "white",
+            "labelColor": "gray",
+            "titleColor": "gray",
+            "titleFontWeight": "bold",
+            "titleFont": "open sans"
+          }
+        },
+        "y": {
+          "field": "Country",
+          "type": "nominal",
+          "title": "COUNTRY",
+          "axis": {
+            "domainColor": "white",
+            "tickColor": "white",
+            "labelColor": "gray",
+            "titleColor": "gray",
+            "titleFontWeight": "bold",
+            "titleFont": "open sans"
+          }
+        },
+        "color": {"value":"red"},
+        "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "Threatened_Total", "type": "quantitative", "title": "Threatened species", "format": ","},
+          {"field": "Normalized_Threatened_Total", "type": "quantitative", "format": ".2f", "title": "Normalized threatened score"}
+        ]
+      },
+      "layer": [
+        {
+          "mark": "bar"
+        },
+        {
+          "mark": {
+            "type": "text",
+            "font": "open sans",
+            "fontWeight": "bold",
+            "align": "left",
+            "baseline": "middle",
+            "dx": 3
+          },
+          "encoding": {
+            "text": {"field": "Threatened_Total", "type": "quantitative", "format": ","}
+          }
+        }
+      ]
+    }
