@@ -42,7 +42,7 @@
             "scheme": "greens"
             },
           "legend": {
-            "title": "Normalized biodiversity score",
+            "title": "Normalized Biodiversity Score",
             "titleFont": "open sans",
             "labelFont": "open sans",
             "titleColor": "gray",
