@@ -1,0 +1,11 @@
+Country,Postal,Threatened_Mammals,Threatened_Birds,Threatened_Reptiles,Threatened_Amphibians,Threatened_Fishes,Threatened_Molluscs,Threatened_Other_Inverts,Threatened_Plants,Threatened_Fungi,Threatened_Chromists,Threatened_Total,Extinct_Animalia_Subtotal,Threatened_Animalia_Subtotal,Animalia_Subtotal,Extinct_Plant_Subtotal,Threatened_Plant_Subtotal,Plant_Subtotal,Extinct_Fungus_Subtotal,Threatened_Fungus_Subtotal,Fungus_Subtotal,Extinct_Chromist_Subtotal,Threatened_Chromist_Subtotal,Chromist_Subtotal,Extinct_Total,Threatened_Total,Total,Normalized_Extinct_Total,Normalized_Threatened_Total,Normalized_Total
+Madagascar,MG,135,39,139,145,113,35,161,"2,234",0,0,"3,001",22,767,"3,845",105,"2,234","3,713",0,0,0,0,0,0,127,3001,7558,0.379104478,1,0.620059289
+Ecuador,EC,47,102,86,169,67,49,25,"1,957",1,6,"2,509",50,545,"4,636",57,"1,957","4,481",0,1,5,4,6,15,111,2509,9137,0.331343284,0.836,0.750082345
+Malaysia,MY,81,63,58,33,135,39,275,"1,059",4,0,"1,747",14,684,"5,714",21,"1,059","3,018",0,4,6,0,0,0,35,1747,8738,0.104477612,0.582,0.717226614
+Indonesia,INDO,205,171,36,29,260,42,324,673,2,0,"1,742",25,"1,067","9,161",14,673,"3,009",0,2,2,0,0,0,39,1742,12172,0.11641791,0.580333333,1
+Mexico,MX,98,69,101,237,264,8,109,837,5,0,"1,728",65,886,"6,594",7,837,"3,348",0,5,26,0,0,0,72,1728,9968,0.214925373,0.575666667,0.818511199
+United States,US,41,93,40,56,256,315,273,575,55,0,"1,704",270,"1,074","7,994",64,575,"2,580",1,55,119,0,0,0,335,1704,10693,1,0.567666667,0.878211462
+Australia,AU,66,53,76,47,199,174,375,607,13,0,"1,610",49,990,"7,982",2,607,"3,093",0,13,29,0,0,0,51,1610,11104,0.152238806,0.536333333,0.912055336
+"Tanzania, United Republic of",TZ,44,49,35,61,202,11,137,781,0,0,"1,320",65,539,"5,013",28,781,"2,375",0,0,0,0,0,0,93,1320,7388,0.27761194,0.439666667,0.606060606
+Brazil,BR,86,177,30,35,96,22,51,734,6,0,"1,237",24,497,"6,160",11,734,"3,976",0,6,10,0,0,0,35,1237,10146,0.104477612,0.412,0.833168643
+China,CN,77,96,47,122,148,15,70,631,8,0,"1,214",22,575,"6,165",8,631,"3,191",0,8,32,0,0,0,30,1214,9388,0.089552239,0.404333333,0.770750988
