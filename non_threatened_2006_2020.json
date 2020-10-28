@@ -1,0 +1,52 @@
+{
+  "title": {
+            "text": "NON THREATENED SPECIES WORLDWIDE BY YEAR",
+            "font": "open sans",
+            "fontSize": 17,
+            "color": "green"
+  },
+  "view": {"strokeWidth": 0},
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 300, "height": 200,
+  "data": {"url": "https://raw.githubusercontent.com/NghiepQuangLy/FIT3179_Data_Visualisation_2/main/Non_threatened_species_count_2006_2020.csv"},
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "year",
+      "field": "year",
+      "axis": {
+        "format": "%Y",
+        "gridDash": [10, 10],
+        "domainColor": "white",
+        "tickColor": "lightgray",
+        "labelColor": "gray",
+        "titleColor": "gray",
+        "titleFontWeight": "bold",
+        "titleFont": "open sans"
+      },
+      "title": ""
+    },
+    "y": {
+      "field": "count",
+      "type": "quantitative",
+      "title": "NUMBER OF SPECIES",
+      "scale": {"domain": [1465000, 1485000]},
+      "axis": {
+        "gridDash": [10, 10],
+        "domainColor": "white",
+        "tickColor": "white",
+        "labelColor": "gray",
+        "titleColor": "gray",
+        "titleFontWeight": "bold",
+        "titleFont": "open sans"
+      }
+    },
+    "color": {
+      "value": "green"
+    },
+    "tooltip": [
+      {"field": "year", "type": "temporal", "title": "Year", "format": "%Y"},
+      {"field": "count", "type": "quantitative", "title": "Number of species", "format": ","}
+    ]
+  }
+}
