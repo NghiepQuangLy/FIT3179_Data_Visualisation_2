@@ -1,0 +1,168 @@
+{
+      "view": {"strokeWidth": 0},
+      "data": {
+        "url": "https://raw.githubusercontent.com/NghiepQuangLy/FIT3179_Data_Visualisation_2/main/Threatened_species_and_greenhouse_gas_emission_by_country_2016.csv"
+      },
+      "params": [
+        {
+          "name": "Threatened_Species_Above",
+          "value": 0,
+          "bind": {
+            "input": "range",
+            "min": 0,
+            "max": 1050,
+            "step": 10,
+            "name": "Threatened Species:"
+          }
+        },
+        {
+          "name": "Greenhouse_Gas_Above",
+          "value": 0,
+          "bind": {
+            "input": "range",
+            "min": 0,
+            "max": 12000,
+            "step": 10,
+            "name": "Greenhouse Gas (Million Tons):"
+          }
+        }
+      ],
+      "transform": [
+        {"filter": "datum['RL_Total'] > Threatened_Species_Above"},
+        {"filter": "datum['total_ghg'] > Greenhouse_Gas_Above"}
+      ],
+      "height": 300,
+      "width": 500,
+      "title": {
+        "text": "THREATENED SPECIES VS GREENHOUSE GAS EMISSION BY COUNTRY",
+        "font": "open sans",
+        "fontSize": 17,
+        "color": "red"
+      },
+      "encoding": {
+        "x": {
+          "field": "RL_Total",
+          "type": "quantitative",
+          "title": "SPECIES",
+          "scale": {"domain": [0, 1100]},
+          "axis": {
+            "gridDash": [10, 10],
+            "domainColor": "white",
+            "tickColor": "white",
+            "labelColor": "gray",
+            "titleColor": "gray",
+            "titleFontWeight": "bold",
+            "titleFont": "open sans"
+          }
+        },
+        "y": {
+          "field": "total_ghg",
+          "type": "quantitative",
+          "title": "GREENHOUSE GAS EMISSION (MILLION TONS)",
+          "scale": {"domain": [0, 12000]},
+          "axis": {
+            "gridDash": [10, 10],
+            "domainColor": "white",
+            "tickColor": "white",
+            "labelColor": "gray",
+            "titleColor": "gray",
+            "titleFontWeight": "bold",
+            "titleFont": "open sans"
+          }
+        },
+        "color": {"value":"red"},
+        "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "RL_Total", "type": "quantitative", "title": "Threatened species", "format": ","},
+          {"field": "total_ghg", "type": "quantitative", "title": "Greenhouse gas in million tons", "format": ","}
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "circle"
+            },
+          "encoding": {
+            "opacity": {"value": 0.2},
+            "size": {"value": 200}
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "size": 200
+          }
+        },
+        { "transform": [
+            {"filter": "datum['Country'] == 'China' || datum['Country'] == 'United States' || datum['Country'] == 'India' || datum['Country'] == 'Indonesia'"}
+          ],
+          "mark": {
+            "type": "line",
+            "opacity": 0.1,
+            "fill": "red"
+          }
+        },
+        {
+          "transform": [
+            {"filter": "datum['Country'] == 'China' || datum['Country'] == 'United States' || datum['Country'] == 'India' || datum['Country'] == 'Mexico' || datum['Country'] == 'Indonesia'"}
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "middle",
+            "dx": -12,
+            "fontSize": 11.5,
+            "fontWeight": "bold"
+          },
+          "encoding": {
+            "text": {"field": "Country", "type": "nominal"},
+            "color": {"value": "red"},
+            "opacity": {
+              "value": 1
+            }
+          }
+        },
+        {
+          "transform": [
+            {"filter": "datum['Country'] == 'Australia'"}
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "middle",
+            "dx": 60,
+            "fontSize": 11.5,
+            "fontWeight": "bold"
+          },
+          "encoding": {
+            "text": {"field": "Country", "type": "nominal"},
+            "color": {"value": "red"},
+            "opacity": {
+              "value": 1
+            }
+          }
+        },
+        {
+          "transform": [
+            {"filter": "datum['Country'] == 'India' && Threatened_Species_Above < 503 && Greenhouse_Gas_Above < 2229"}
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "baseline": "middle",
+            "dx": 60,
+            "dy": -100,
+            "fontSize": 15,
+            "fontWeight": "bold"
+          },
+          "encoding": {
+            "text": {"value": ["48% global greenhouse", "emission"]},
+            "color": {"value": "grey"},
+            "opacity": {
+              "value": 1
+            },
+            "tooltip": null
+          }
+        }
+      ]
+}
