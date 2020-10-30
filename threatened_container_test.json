@@ -2,6 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "padding": 0,
   "width": "container",
+  "height": "container,
   "data": {
     "url": "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/ne_110m_admin_0_countries.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
@@ -103,7 +104,7 @@
         "url": "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/Threatened_species_in_each_major_group_by_country_2020_new.csv"
       },
       "title": {
-        "text": "THREATENED SPECIES BY GROUP BY COUNTRY",
+        "text": "THREATENED SPECIES BY GROUP BY COUNTRY IN 2020",
         "font": "open sans",
         "fontSize": 17,
         "color": "red"
