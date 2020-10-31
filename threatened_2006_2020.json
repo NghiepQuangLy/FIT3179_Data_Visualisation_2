@@ -1,6 +1,6 @@
 {
   "title": {
-            "text": "THREATENED SPECIES BY YEAR",
+            "text": "Threatened Species by Year",
             "font": "open sans",
             "fontSize": 17,
             "color": "red"
@@ -29,7 +29,7 @@
     "y": {
       "aggregate": "sum",
       "field": "count",
-      "title": "NUMBER OF SPECIES",
+      "title": "Species",
       "axis": {
         "gridDash": [10, 10],
         "domainColor": "white",
