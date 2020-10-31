@@ -32,7 +32,6 @@
         {"filter": "datum['total_ghg'] > Greenhouse_Gas_Above"}
       ],
       "width": "container",
-      "height": 300,
       "title": {
         "text": "THREATENED SPECIES VS GREENHOUSE GAS EMISSION BY COUNTRY",
         "font": "open sans",
