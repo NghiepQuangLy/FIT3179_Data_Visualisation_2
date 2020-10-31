@@ -42,7 +42,7 @@
         "x": {
           "field": "RL_Total",
           "type": "quantitative",
-          "title": "SPECIES",
+          "title": "Species",
           "scale": {"domain": [0, 1100]},
           "axis": {
             "gridDash": [10, 10],
@@ -57,7 +57,7 @@
         "y": {
           "field": "total_ghg",
           "type": "quantitative",
-          "title": "GREENHOUSE GAS EMISSION (MILLION TONS)",
+          "title": "Greenhouse Gas Emission (Million Tons)",
           "scale": {"domain": [0, 12000]},
           "axis": {
             "gridDash": [10, 10],
