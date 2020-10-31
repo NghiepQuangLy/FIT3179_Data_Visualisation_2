@@ -50,7 +50,9 @@
         "titleFont": "open sans",
         "labelFont": "open sans",
         "titleColor": "gray",
-        "labelColor": "gray"
+        "labelColor": "gray",
+        "orient": "bottom",
+        "direction": "horizontal"
       }
     },
     "tooltip": [
