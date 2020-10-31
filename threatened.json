@@ -20,7 +20,7 @@
       "layer": [
         {
           "title": {
-            "text": "Threatened Species By Country in 2020",
+            "text": "Threatened Species by Country in 2020",
             "font": "open sans",
             "fontSize": 17,
             "color": "red"
@@ -46,7 +46,7 @@
                 "scheme": "reds"
               },
               "legend": {
-                "title": "Normalized Threatened Score",
+                "title": "Normalized threatened score",
                 "titleFont": "open sans",
                 "labelFont": "open sans",
                 "titleColor": "gray",
@@ -108,7 +108,7 @@
       "height": 325,
       "width": 300,
       "title": {
-        "text": "THREATENED SPECIES BY GROUP BY COUNTRY",
+        "text": "Threatened Species by Group by Country in 2020",
         "font": "open sans",
         "fontSize": 17,
         "color": "red"
@@ -120,7 +120,7 @@
         "x": {
           "field": "Pivot Field Values",
           "type": "quantitative",
-          "title": "SPECIES",
+          "title": "Species",
           "scale": {"domain": [0, 2500]},
           "axis": {
             "gridDash": [10, 10],
@@ -135,7 +135,7 @@
         "y": {
           "field": "Major Group",
           "type": "nominal",
-          "title": "MAJOR GROUP",
+          "title": "Major Group",
           "axis": {
             "domainColor": "white",
             "tickColor": "white",
