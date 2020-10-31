@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "background": "white",
-  "width": "container",
+  "width": 600,
+  "height": 300,
   "title": {
     "text": "BIODIVERSITY BY COUNTRY IN 2020",
     "font": "open sans",
@@ -9,7 +10,7 @@
     "color": "green"
   },
   "projection": {"type": "equalEarth"},
-  "config":{"view": {"strokeWidth": 0}},
+  "config":{"view": {"strokeWidth": 1}},
   "layer": [
     
     {
