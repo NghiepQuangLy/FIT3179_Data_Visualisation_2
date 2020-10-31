@@ -10,7 +10,7 @@
     "color": "green"
   },
   "projection": {"type": "equalEarth"},
-  "config":{"view": {"strokeWidth": 1}},
+  "config":{"view": {"strokeWidth": 0}},
   "layer": [
     
     {
