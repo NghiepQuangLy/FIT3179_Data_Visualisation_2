@@ -5,7 +5,7 @@
       },
       "width": "container",
       "title": {
-        "text": "TOP 10 COUNTRIES WITH THE MOST THREATENED SPECIES",
+        "text": "Top 10 Countries With the Most Threatened Species",
         "font": "open sans",
         "fontSize": 17,
         "color": "red"
@@ -14,7 +14,7 @@
         "x": {
           "field": "Threatened_Total",
           "type": "quantitative",
-          "title": "SPECIES",
+          "title": "Species",
           "axis": {
             "gridDash": [10, 10],
             "domainColor": "white",
@@ -28,7 +28,7 @@
         "y": {
           "field": "Country",
           "type": "nominal",
-          "title": "COUNTRY",
+          "title": "",
           "axis": {
             "domainColor": "white",
             "tickColor": "white",
