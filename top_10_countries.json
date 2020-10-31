@@ -3,8 +3,7 @@
       "data": {
         "url": "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/Top_10_countries_with_threatened_species.csv"
       },
-      "height": 325,
-      "width": 300,
+      "width": "container",
       "title": {
         "text": "TOP 10 COUNTRIES WITH THE MOST THREATENED SPECIES",
         "font": "open sans",
