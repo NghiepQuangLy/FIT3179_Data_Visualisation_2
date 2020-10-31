@@ -29,7 +29,7 @@
     "y": {
       "field": "count",
       "type": "quantitative",
-      "title": "NUMBER OF SPECIES",
+      "title": "Species",
       "scale": {"domain": [1465000, 1485000]},
       "axis": {
         "gridDash": [10, 10],
