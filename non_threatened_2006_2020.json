@@ -8,7 +8,7 @@
   "view": {"strokeWidth": 0},
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": "container",
-  "height": 349,
+  "height": 330,
   "data": {"url": "https://raw.githubusercontent.com/NghiepQuangLy/FIT3179_Data_Visualisation_2/main/Non_threatened_species_count_2006_2020.csv"},
   "mark": "area",
   "encoding": {
