@@ -1,52 +1,262 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
-  <!-- Import vega-embed -->
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-</head>
-<body>
-
-<div id="vis"></div>
-<div id="vis4"></div>
-<div id="vis3"></div>
-<div id="vis2"></div>
-<div id="vis5"></div>
-<div id="vis6"></div>
-  
-<script type="text/javascript">
-  var spec = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/biodiversity.json";
-  vegaEmbed('#vis', spec).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-  var spec2 = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/threatened.json";
-  vegaEmbed('#vis2', spec2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-  var spec3 = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/threatened_2006_2020.json";
-  vegaEmbed('#vis3', spec3).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-  var spec4 = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/non_threatened_2006_2020.json";
-  vegaEmbed('#vis4', spec4).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-  var spec5 = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/top_10_countries.json";
-  vegaEmbed('#vis5', spec5).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-  
-  var spec6 = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/scatterplot.json";
-  vegaEmbed('#vis6', spec6).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-</script>
-</body>
+   <head>
+      <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+      <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+      <!-- Import vega-embed -->
+      <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+      <!-- Import pure.css -->
+      <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Google font -->
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+      <style>
+         *{
+         font-family: 'Open Sans', sans-serif;
+         }
+         h1 {
+         font-weight: 900;
+         }
+         h1, h2 {
+         color: red;
+         }
+         body {
+         background-color: lightgray;
+         font-size: 13px;
+         }
+         .page{
+         width: 1220px;    
+         background-color: white;   
+         margin: auto;
+         padding: 100px;
+         padding-top: 35px;
+         }
+         .vis-container{
+         width: 100%;
+         }
+         .description h2, h1{
+         margin-top:0px;
+         }
+         .pure-g{
+         margin-bottom: 30px;
+         }
+         .description h2, h1{
+         margin-top:0px;
+         }
+         .description-right {
+         padding-left: 50px;
+         }
+         .description-left{
+         padding-right: 50px;
+         }
+         .description-middle {
+         text-align: center;
+         }
+         hr.new {
+         width: 250px;
+         height: 5px;
+         background-color:red;
+         margin: auto;
+         border: 0px;
+         }
+         .vega-bind{
+         color:gray;     
+         }
+      </style>
+   </head>
+   <body>
+      <div class="page">
+         <!-- pure grid group -->
+         <div class="pure-g">
+            <div class="pure-u-23-24">
+               <h1 style="margin-bottom:5px; text-align: center; font-size: 50px;">THE HOLOCENE EXTINCTION</h1>
+               <h2 style="margin-top:5px;font-weight:100; margin-bottom: 15px; text-align: center;">ANOTHER HOMO SAPIENS BY-PRODUCT</h2>
+               <hr class="new">
+            </div>
+            <div class="pure-u-1-24">
+               <img src="https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/holocene.png" alt="" style="width:60px;height:60px;" /> 
+            </div>
+         </div>
+         <!-- end pure grid group -->
+         <!-- pure grid group -->
+         <div class="pure-g">
+            <div class="pure-u-1-3">
+               <div class="description description-left">
+                  <p style="color:gray">Throughout the history of Earth, there have been 5 mass extinction events. For the past 3.5 billion years, about 99% of the estimated 4 billion species that ever existed are no longer found. Homo sapiens, for better or worse, is part of the remaining remnants that are left of life.</p>
+               </div>
+            </div>
+            <div class="pure-u-1-3">
+               <div class="description description-left description-right">
+                  <p style="color:gray">Unfortunately, we are ourselves witnesses of the unfolding 6th mass extinction event, the Holocene extinction. Contrary to previous occurrences, Holocene extinction is a result of human activity, and not of natural causes.</p>
+               </div>
+            </div>
+            <div class="pure-u-1-3">
+               <div class="description description-right">
+                  <p style="color:gray">The Holocene extinction has been occurring steadily for the last 10,000 years. However, the advancement of human civilization has undoubtedly artificially accelerated this evolutionary process from something that would take thousands of years to mere decades.</p>
+               </div>
+            </div>
+         </div>
+         <!-- end pure grid group -->
+         <!-- pure grid group -->
+         <div class="pure-g">
+            <div class="pure-u-1-5">
+               <div class="description description-left description-right">
+                  <h2 style="font-weight: 900; color:red; font-size: 35px; text-align: center;margin-bottom: 5px;">8.7M+</h2>
+                  <p style="color:gray; text-align: center;margin-top: 0px;">Extant Species</p>
+               </div>
+            </div>
+            <div class="pure-u-1-5">
+               <div class="description description-left description-right">
+                  <h2 style="font-weight: 900; color:red; font-size: 35px; text-align: center;margin-bottom: 5px;">1.5M+</h2>
+                  <p style="color:gray; text-align: center;margin-top: 0px;">Species Identified</p>
+               </div>
+            </div>
+            <div class="pure-u-1-5">
+               <div class="description description-left description-right">
+                  <h2 style="font-weight: 900; color:red; font-size: 35px; text-align: center;margin-bottom: 5px;">120K+</h2>
+                  <p style="color:gray; text-align: center;margin-top: 0px;">Species Assessed by IUCN</p>
+               </div>
+            </div>
+            <div class="pure-u-1-5">
+               <div class="description description-left description-right">
+                  <h2 style="font-weight: 900; color:red; font-size: 35px; text-align: center;margin-bottom: 5px;">32K+</h2>
+                  <p style="color:gray; text-align: center;margin-top: 0px;">Species Assessed as Threatened</p>
+               </div>
+            </div>
+            <div class="pure-u-1-5">
+               <div class="description description-left description-right">
+                  <h2 style="font-weight: 900; color:red; font-size: 35px; text-align: center;margin-bottom: 5px;">25%+</h2>
+                  <p style="color:gray; text-align: center;margin-top: 0px;">Species Assessed as Threatened</p>
+               </div>
+            </div>
+         </div>
+         <!-- end pure grid group -->
+         <hr style="width: 300px; height: 1px;background-color:lightgray; border:0px;margin:0px;position:relative; left:-100px;margin-bottom: 5px;">
+         <!-- pure grid group -->
+         <div class="pure-g">
+            <div class="pure-u-1-3">
+               <div class="description description-left">
+                  <h2 style="font-size:28px;margin-bottom: 0px;">01 ●○○○○</h2>
+                  <h2>Jewels of the Earth</h2>
+                  <p style="color:gray;">Earth is home to more than 8.7 million living species. The land, the sea, the sky, all decorated by their marvellous existence. Thousands of species of birds roam the vast sky, tens of thousands of species of fish rule the boundless oceans, hundreds of thousands of species of plants establish the foundation of life and harmony, and innumerable species of insects silently cleans the Earth of its waste.</p>
+                  <p style="font-size: 50px;">🦍🦍🦍🦍🦍</p>
+               </div>
+            </div>
+            <div class="pure-u-2-3">
+               <div id="vis" class="vis-container"></div>
+            </div>
+         </div>
+         <!-- end pure grid group -->
+         <hr style="width: 300px; height: 1px;background-color:lightgray; border:0px;margin:0px;position:relative; left:-100px;margin-bottom: 5px;">
+         <!-- pure grid group -->
+         <div class="pure-g">
+            <div class="pure-u-1-3">
+               <div class="description description-left">
+                  <h2 style="font-size:28px;margin-bottom: 0px;">02 ○●○○○</h2>
+                  <h2>Cracked Jewels</h2>
+                  <p style="color:gray;">However, man single-handedly brought ruins to these natural wonders. From 1970 to 2014, humanity has wiped out 60% of animal populations, according to WWF’s Living Planet Report 2018. Additionally, the number of species facing extinction is rocketing at a terrifying speed with 2020 doubling 2006 in threatened species (32,441 vs 16,116). Given the amount of non-identified and non-assessed species, the true number is unfathomable.</p>
+                  <p style="font-size: 50px;">🦍🦍🦍</p>
+               </div>
+            </div>
+            <div class="pure-u-1-3">
+               <div id="vis4" class="vis-container"></div>
+            </div>
+            <div class="pure-u-1-3">
+               <div id="vis3" class="vis-container"></div>
+            </div>
+         </div>
+         <!-- end pure grid group -->
+         <hr style="width: 300px; height: 1px;background-color:lightgray; border:0px;margin:0px;position:relative; left:-100px;margin-bottom: 5px;">
+         <!-- pure grid group -->  
+         <div class="pure-g">
+            <div class="pure-u-1-2">
+               <div class="description description-left">
+                  <h2 style="font-size:28px;margin-bottom: 0px;">03 ○○●○○</h2>
+                  <h2>The Culprits</h2>
+                  <p style="color:gray;">Every country commits ecocide and the visualisation below illustrates the degree to which they are accountable for. While there are those with as few as 6 threatened species, there are others with hundreds and thousands of species facing extinction because of their actions.</p>
+               </div>
+            </div>
+            <div class="pure-u-1-2">
+               <div class="description description-left">
+                  <p style="text-align: right;color:gray;padding-left:50px;"><br><br><br><br>⚠️ indicates the top 10 countries.<br><br>🗾 Click on a country to see threatened species by country.</p>
+               </div>
+            </div>
+         </div>
+         <!-- end pure grid group -->
+         <!-- pure grid group -->
+         <div class="pure-g">
+            <div class="pure-u-1-1">
+               <div id="vis2" class="vis-container"></div>
+            </div>
+         </div>
+         <!-- end pure grid group -->
+         <hr style="width: 300px; height: 1px;background-color:lightgray; border:0px;margin:0px;position:relative; left:-100px;margin-bottom: 5px;">
+         <!-- pure grid group -->
+         <div class="pure-g">
+            <div class="pure-u-1-3">
+               <div class="description description-left">
+                  <h2 style="font-size:28px;margin-bottom: 0px;">04 ○○○●○</h2>
+                  <h2>The Chief Offenders</h2>
+                  <p style="color:gray;">The following 10 countries form the vanguard of humankind destruction to Mother Nature. The highest of them all, Madagascar, is already accountable for 1/8 of the threatened species assessed by IUCN.</p>
+               </div>
+            </div>
+            <div class="pure-u-2-3">
+               <div id="vis5" class="vis-container"></div>
+            </div>
+         </div>
+         <!-- end pure grid group -->
+         <hr style="width: 300px; height: 1px;background-color:lightgray; border:0px;margin:0px;position:relative; left:-100px;margin-bottom: 5px;">
+         <!-- pure grid group -->
+         <div class="pure-g">
+            <div class="pure-u-1-3">
+               <div class="description description-left">
+                  <h2 style="font-size:28px;margin-bottom: 0px;">05 ○○○○●</h2>
+                  <h2>CO2: The Silent Killer</h2>
+                  <p style="color:gray;">Despite the many causes of biomass destruction, greenhouse gases and global warming are inevitably the most catastrophic to the survivability of wildlife. Based on the following visualisation, countries with higher CO2 emission usually have a higher number of threatened species.</p>
+               </div>
+            </div>
+            <div class="pure-u-2-3">
+               <div id="vis6" class="vis-container"></div>
+            </div>
+         </div>
+         <div class="pure-g">
+            <div class="pure-u-1-1 small-font">
+               <p style="color:gray;">This visualisation is created by <a href="https://github.com/NghiepQuangLy" target="_blank">Quang Ly</a>.<br>Threatened species data in 2020 is sourced from <a href="https://www.iucnredlist.org/resources/summary-statistics" target="_blank">IUCN Summary Statistics</a>.<br>Threatened species data in 2016 is sourced from <a href="https://jadonwagstaff.github.io/big_data/visualization.html" target="_blank">Jadon Wagstaff</a>.<br>CO2 data is sourced from <a href="https://github.com/owid/co2-data" target="_blank">Our World in Data</a>.</p>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript">
+         var spec = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/biodiversity.json";
+         vegaEmbed('#vis', spec).then(function(result) {
+           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+         }).catch(console.error);
+         
+         var spec2 = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/threatened.json";
+         vegaEmbed('#vis2', spec2).then(function(result) {
+           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+         }).catch(console.error);
+         
+         var spec3 = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/threatened_2006_2020.json";
+         vegaEmbed('#vis3', spec3).then(function(result) {
+           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+         }).catch(console.error);
+         
+         var spec4 = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/non_threatened_2006_2020.json";
+         vegaEmbed('#vis4', spec4).then(function(result) {
+           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+         }).catch(console.error);
+         
+         var spec5 = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/top_10_countries.json";
+         vegaEmbed('#vis5', spec5).then(function(result) {
+           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+         }).catch(console.error);
+         
+         var spec6 = "https://NghiepQuangLy.github.io/FIT3179_Data_Visualisation_2/scatterplot.json";
+         vegaEmbed('#vis6', spec6).then(function(result) {
+           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+         }).catch(console.error);
+         
+      </script>
+   </body>
 </html>
